@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start":"node server/server",
     "test": "mocha server/**/*.test.js",
     "test-watch":"nodemon --exec 'npm test'"
   },
-  "author": "",
+  "engines":{
+    "node":"8.9.1"
+  },
+  "author": "Rishabh Yadav",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
