@@ -9,6 +9,27 @@
         <title>Todo API Tester</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                background-color: #DCDCDC;
+                padding:0 40px;
+            }
+            h1{
+                text-align: center;
+            }
+            .form-area{
+                padding:30px 10px;
+                border-radius:5px;
+                border:1px solid;
+                width:300px;
+            }
+            label{
+                display: block;
+            }
+            .field-area{
+                margin-bottom:20px;
+            }
+        </style>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -23,13 +44,63 @@
         <hr>
         <div class="get-specific-todo">
             <h3>Get /todos/:id</h3>
-            <input type="text" id="todoId" name="todoId" maxlength="80">&nbsp;&nbsp;
+            <input type="text" id="todoId" name="todoId" maxlength="80" placeholder="Enter todo id">&nbsp;&nbsp;
             <button id="get-specific">Get Todo</button>
         </div>
         <hr>
         <div class="post-route">
             <h3>POST /todo</h3>
             <button id="save">Save Todo</button>
+        </div>
+        <hr>
+        <div class="delete-todo">
+            <h3>DELETE /todos/:id</h3>
+            <input type="text" id="delete-input" name="delete-input" maxlength="80" placeholder="Enter todo id">&nbsp;&nbsp;
+            <button id="delete">Delete Todo</button>
+        </div>
+        <hr>
+        <div class="update-todo">
+            <h3>PATCH /todos/:id</h3>
+            <input type="text" id="update-input" name="update-input" maxlength="80" placeholder="Enter todo id">&nbsp;&nbsp;
+            <button id="update">Update Todo</button>
+        </div>
+        <br>
+        <hr>
+        <h2>User API Tester</h2>
+        <div class="post-route">
+            <h3>POST Sign Up User /users</h3>
+            <button id="save-user">New User</button>
+        </div>
+        <hr>
+        <div class="Get-route">
+            <h3>Get User Profile /users/me</h3>
+            <button id="user-detail">Get User</button>
+        </div>
+        <hr>
+
+        <!-- form login area -->
+        <div class="form-area">
+            <h3>Enter Credentials</h3>
+            <div class="field-area">
+                <label for="email">Email </label>
+                <input type="text" name="email" id="email" placeholder="enter email">
+            </div>
+            <div class="field-area">
+                <label for="password">Password </label>
+                <input type="password" name="password" id="password" placeholder="enter password">
+            </div>
+            <div class="submit">
+                <button id="login">login</button>
+            </div>
+        </div>
+
+        <!-- Logout User -->
+        <hr>
+        <div class="Logout">
+            <h3>DELETE /users/me/token</h3>
+            <span>Logging the User Out</span>
+            <button id="logout">logout</button>
+
         </div>
 
         <script src="/js/jquery-2.1.4.min.js"></script>

@@ -11,6 +11,10 @@ var Todo=mongoose.model('Todo',{
     },
     completedAt:{
         type:Number
+    },
+    _creatorId:{
+        type:mongoose.Schema.Types.ObjectId,
+        required:true
     }
 });
 module.exports={Todo};

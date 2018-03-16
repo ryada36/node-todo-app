@@ -1,12 +1,16 @@
 var mongoose = require('mongoose');
 
-//mongodb://ryada36:montiY#89@ds163418.mlab.com:63418/todo
 //to use promises with mongoose
+mongoose.Promise=global.Promise;
+
 
 const REMOTE_MONGO='mongodb://ryada36:montiY#89@ds163418.mlab.com:63418/todo';
-
-mongoose.Promise=global.Promise;
-const DB_URL=process.env.PORT ? REMOTE_MONGO : 'mongodb://localhost:27017/TodoApp';
+if(process.env.PORT){
+    DB_URL=REMOTE_MONGO;
+}
+else{
+    DB_URL=process.env.MONGODB_URI;
+}
 mongoose.connect(DB_URL);
 
 module.exports={mongoose}

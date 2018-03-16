@@ -1,0 +1,11 @@
+{
+    "test":{
+        "MONGODB_URI":"mongodb://localhost:27017/TodoAppTest",
+        "SECRET":"aafjklaflbvslvoiio4towg"
+    },
+    "development":{
+        "MONGODB_URI":"mongodb://localhost:27017/TodoApp",
+        "SECRET":"aafjklaflbvslvoiio4towg"
+    }
+    
+}
